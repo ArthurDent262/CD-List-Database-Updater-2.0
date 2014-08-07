@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<DOCUMENT type="Advanced Installer" version="1.9" modules="professional" RootPath=".">
+  <COMPONENT cid="caphyon.advinst.msicomp.MsiPropsComponent">
+    <ROW Property="ARPHELPTELEPHONE" Value="0833085018"/>
+    <ROW Property="CTRLS" Value="2"/>
+    <ROW Property="RUNAPPLICATION" Value="1"/>
+    <ROW Property="ProductName" Value="CD List Database Updater 2.0"/>
+    <ROW Property="ALLUSERS" Value="2"/>
+    <ROW Property="ARPCONTACT" Value="Craig Lotter"/>
+    <ROW Property="BannerBitmap" Value="installer_background.jpg"/>
+    <ROW Property="ProductVersion" Value="2.0.0"/>
+    <ROW Property="SecureCustomProperties" Value="OLDPRODUCTS;AI_NEWERPRODUCTFOUND"/>
+    <ROW Property="UpgradeCode" Value="{A252F9D9-6F9A-49A9-BD9C-1FFE16EEC40A}"/>
+    <ROW Property="ProductCode" Value="{6CDB55CF-20DE-45B8-A6AD-EB2D277779D6}"/>
+    <ROW Property="ARPPRODUCTICON" Value="controlPanelIcon_1.exe"/>
+    <ROW Property="DialogBitmap" Value="installer_background_dialog.jpg"/>
+    <ROW Property="Manufacturer" Value="Craig Lotter"/>
+    <ROW Property="ProductLanguage" Value="1033"/>
+  </COMPONENT>
+  <COMPONENT cid="caphyon.advinst.msicomp.MsiDirsComponent">
+    <ROW Directory="Help_DIR" Directory_Parent="TARGETDIR" DefaultDir="Help"/>
+    <ROW Directory="Reports_DIR" Directory_Parent="TARGETDIR" DefaultDir="Reports"/>
+    <ROW Directory="SHORTCUTDIR" Directory_Parent="TARGETDIR" DefaultDir="SHORTC~1|SHORTCUTDIR" IsPseudoRoot="1"/>
+    <ROW Directory="TARGETDIR" Directory_Parent="" DefaultDir="SourceDir"/>
+  </COMPONENT>
+  <COMPONENT cid="caphyon.advinst.msicomp.MsiCompsComponent">
+    <ROW Component="Background_Image.jpg" ComponentId="{BFD89AC9-845D-4789-84E0-B0E588EAD0D6}" Directory_="Reports_DIR" Attributes="0" Condition="" KeyPath="Background_Image.jpg" FullKeyPath="TARGETDIR\Reports"/>
+    <ROW Component="CD_List_Database_Updater.exe" ComponentId="{6DC65758-0373-4D8B-9490-A858C0B1D036}" Directory_="TARGETDIR" Attributes="0" Condition="" KeyPath="CD_List_Database_Updater.exe" FullKeyPath="TARGETDIR\CD_List_Database_Updater.exe"/>
+    <ROW Component="Help.rtf" ComponentId="{84056755-67D2-43D1-88F7-789DCF5D538B}" Directory_="Help_DIR" Attributes="0" Condition="" KeyPath="Help.rtf" FullKeyPath="TARGETDIR\Help"/>
+  </COMPONENT>
+  <COMPONENT cid="caphyon.advinst.msicomp.MsiFeatsComponent">
+    <ROW Feature="MainFeature" Feature_Parent="" Title="MainFeature" Description="Description" Display="2" Level="1" Directory_="TARGETDIR" Attributes="0" Components="Background_Image.jpg Help.rtf CD_List_Database_Updater.exe"/>
+  </COMPONENT>
+  <COMPONENT cid="caphyon.advinst.msicomp.MsiFilesComponent">
+    <ROW File="Background_Image.jpg" Component_="Background_Image.jpg" FileName="Backgr~1.jpg|Background_Image.jpg" Version="" Language="" Attributes="" SourcePath="..\..\CD List Database Updater\Images\Reports\Background_Image.jpg" SelfReg="false"/>
+    <ROW File="CD_List_Database_Updater.exe" Component_="CD_List_Database_Updater.exe" FileName="CD_Lis~1.exe|CD_List_Database_Updater.exe" Version="" Language="" Attributes="" SourcePath="..\..\CD List Database Updater\obj\Release\CD_List_Database_Updater.exe" SelfReg="false"/>
+    <ROW File="Help.rtf" Component_="Help.rtf" FileName="Help.rtf" Version="" Language="" Attributes="" SourcePath="..\..\CD List Database Updater\Help\Help.rtf" SelfReg="false"/>
+  </COMPONENT>
+  <COMPONENT cid="caphyon.advinst.msicomp.MsiCustActComponent">
+    <ROW Action="AI_DOWNGRADE" Type="19" Source="" Target="A higher version of [ProductName] is installed."/>
+    <ROW Action="AI_LaunchApp" Type="194" Source="viewer.exe" Target="[#CD_List_Database_Updater.exe]"/>
+    <ROW Action="SET_SHORTCUTDIR" Type="307" Source="SHORTCUTDIR" Target="[ProgramMenuFolder][ProductName]"/>
+    <ROW Action="SET_TARGETDIR" Type="307" Source="TARGETDIR" Target="[ProgramFilesFolder]\[ProductName]"/>
+  </COMPONENT>
+  <COMPONENT cid="caphyon.advinst.msicomp.MsiUpgradeComponent">
+    <ROW UpgradeCode="UpgradeCode" VersionMin="" VersionMax="ProductVersion" Language="" Attributes="1025" Remove=""/>
+    <ROW UpgradeCode="UpgradeCode" VersionMin="ProductVersion" VersionMax="" Language="" Attributes="2" Remove=""/>
+  </COMPONENT>
+  <COMPONENT cid="caphyon.advinst.msicomp.MsiMergeModsComponent">
+  </COMPONENT>
+  <COMPONENT cid="caphyon.advinst.msicomp.MsiShortsComponent">
+    <ROW Shortcut="CD_List_Database_Updater_2.0_1" Directory_="SHORTCUTDIR" Name="CDList~2.0|CD List Database Updater 2.0" Component_="Background_Image.jpg" Target="[TARGETDIR]CD_List_Database_Updater.exe" Arguments="" Description="" Hotkey="0" Icon_="controlPanelIcon_1.exe" IconIndex="0" ShowCmd="1" WkDir=""/>
+    <ROW Shortcut="Uninstall_CD_List_Database_Updater" Directory_="SHORTCUTDIR" Name="Uninst~1|Uninstall CD List Database Updater" Component_="Background_Image.jpg" Target="[SystemFolder]msiexec.exe" Arguments="/x [ProductCode]" Description="" Hotkey="0" Icon_="SystemFolder_msiexec.exe" IconIndex="0" ShowCmd="1" WkDir=""/>
+  </COMPONENT>
+  <COMPONENT cid="caphyon.advinst.msicomp.MsiIconsComponent">
+    <ROW Name="SystemFolder_msiexec.exe" SourcePath="&lt;uninstall.ico&gt;" Index="0"/>
+    <ROW Name="controlPanelIcon_1.exe" SourcePath="..\..\CD List Database Updater\Images\Programme_Icon.ico" Index="0"/>
+  </COMPONENT>
+  <COMPONENT cid="caphyon.advinst.msicomp.MsiInstExSeqComponent">
+    <ROW Action="AI_DOWNGRADE" Condition="AI_NEWERPRODUCTFOUND AND (UILevel &lt;&gt; 5)" Sequence="210"/>
+  </COMPONENT>
+  <COMPONENT cid="caphyon.advinst.msicomp.MsiBinaryComponent">
+    <ROW Name="installer_background.jpg" SourcePath="..\..\CD List Database Updater\Images\installer_background.jpg"/>
+    <ROW Name="installer_background_dialog.jpg" SourcePath="..\..\CD List Database Updater\Images\installer_background_dialog.jpg"/>
+    <ROW Name="viewer.exe" SourcePath="&lt;viewer.exe&gt;"/>
+  </COMPONENT>
+  <COMPONENT cid="caphyon.advinst.msicomp.MsiInstallUISequenceComponent">
+    <ATTRIBUTE name="Start" value="WelcomeDlg FolderDlg VerifyReadyDlg"/>
+    <ATTRIBUTE name="Progress" value="ProgressDlg"/>
+    <ATTRIBUTE name="End" value="ExitDialog"/>
+  </COMPONENT>
+  <COMPONENT cid="caphyon.advinst.msicomp.PreReqComponent">
+    <ROW DisplayName=".NET Framework" SetupFileUrl="http://www.microsoft.com/downloads/details.aspx?FamilyID=262d25e3-f589-4842-8157-034d1e7cf3a3&amp;displaylang=en" Location="1" ExactSize="23698" TargetOS="2" SearchType="0" SearchString="[SystemFolder]mscoree.dll" VerMin="1.0" VerMax="" ComLine="dotnetfx.exe"/>
+  </COMPONENT>
+  <COMPONENT cid="caphyon.advinst.msicomp.MsiMediaComponent">
+    <ATTRIBUTE name="InstallationType" value="1"/>
+    <ATTRIBUTE name="MediaSize" value="0"/>
+    <ATTRIBUTE name="Compress" value="1"/>
+    <ATTRIBUTE name="Package" value="6"/>
+    <ATTRIBUTE name="PackageName" value="Release\CD List Database Updater Installer"/>
+    <ATTRIBUTE name="IconPath" value="..\..\CD List Database Updater\Images\Programme_Icon.ico?0"/>
+  </COMPONENT>
+</DOCUMENT>

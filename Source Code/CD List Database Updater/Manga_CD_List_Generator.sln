@@ -1,0 +1,22 @@
+Microsoft Visual Studio Solution File, Format Version 8.00
+Project("{F184B08F-C81C-45F6-A57F-5ABD9991F28F}") = "Manga_CD_List_Generator", "Manga_CD_List_Generator.vbproj", "{34F636E9-F323-4F12-9F87-5DB4DAF54BB5}"
+	ProjectSection(ProjectDependencies) = postProject
+	EndProjectSection
+EndProject
+Global
+	GlobalSection(SolutionConfiguration) = preSolution
+		Debug = Debug
+		Release = Release
+		Description = Program for generating a file listing and then updating an access database with the results. 
+	EndGlobalSection
+	GlobalSection(ProjectConfiguration) = postSolution
+		{34F636E9-F323-4F12-9F87-5DB4DAF54BB5}.Debug.ActiveCfg = Debug|.NET
+		{34F636E9-F323-4F12-9F87-5DB4DAF54BB5}.Debug.Build.0 = Debug|.NET
+		{34F636E9-F323-4F12-9F87-5DB4DAF54BB5}.Release.ActiveCfg = Release|.NET
+		{34F636E9-F323-4F12-9F87-5DB4DAF54BB5}.Release.Build.0 = Release|.NET
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+	EndGlobalSection
+	GlobalSection(ExtensibilityAddIns) = postSolution
+	EndGlobalSection
+EndGlobal

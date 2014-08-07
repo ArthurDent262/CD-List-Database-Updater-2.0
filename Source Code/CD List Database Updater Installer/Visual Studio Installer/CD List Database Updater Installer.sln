@@ -1,0 +1,21 @@
+Microsoft Visual Studio Solution File, Format Version 8.00
+Project("{54435603-DBB4-11D2-8724-00A0C9A8B90C}") = "CD List Database Updater Installer", "CD List Database Updater Installer.vdproj", "{D91BB6A9-C6A0-4EF6-BB41-025C2B9B92A8}"
+	ProjectSection(ProjectDependencies) = postProject
+	EndProjectSection
+EndProject
+Global
+	GlobalSection(SolutionConfiguration) = preSolution
+		Debug = Debug
+		Release = Release
+	EndGlobalSection
+	GlobalSection(ProjectConfiguration) = postSolution
+		{D91BB6A9-C6A0-4EF6-BB41-025C2B9B92A8}.Debug.ActiveCfg = Debug
+		{D91BB6A9-C6A0-4EF6-BB41-025C2B9B92A8}.Debug.Build.0 = Debug
+		{D91BB6A9-C6A0-4EF6-BB41-025C2B9B92A8}.Release.ActiveCfg = Release
+		{D91BB6A9-C6A0-4EF6-BB41-025C2B9B92A8}.Release.Build.0 = Release
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+	EndGlobalSection
+	GlobalSection(ExtensibilityAddIns) = postSolution
+	EndGlobalSection
+EndGlobal
